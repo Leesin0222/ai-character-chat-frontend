@@ -44,7 +44,7 @@ const MessageList: React.FC<MessageListProps> = ({
                 <div className="message-avatar-fallback">{selectedCharacter.name.charAt(0)}</div>
               ) : (
                 <img
-                  src={selectedCharacter.avatar}
+                  src={`${import.meta.env.BASE_URL}${selectedCharacter.avatar}`}
                   alt=""
                   onError={() => handleAvatarError(message.id)}
                 />
@@ -68,7 +68,7 @@ const MessageList: React.FC<MessageListProps> = ({
               <div className="message-avatar-fallback">{selectedCharacter.name.charAt(0)}</div>
             ) : (
               <img
-                src={selectedCharacter.avatar}
+                src={`${import.meta.env.BASE_URL}${selectedCharacter.avatar}`}
                 alt=""
                 onError={() => setTypingAvatarError(true)}
               />

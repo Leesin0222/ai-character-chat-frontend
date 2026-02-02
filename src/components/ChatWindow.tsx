@@ -109,7 +109,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ selectedCharacter, onBackToSele
             </div>
           ) : (
             <img
-              src={selectedCharacter.avatar}
+              src={`${import.meta.env.BASE_URL}${selectedCharacter.avatar}`}
               alt=""
               className="chat-header-avatar"
               onError={() => setHeaderAvatarError(true)}

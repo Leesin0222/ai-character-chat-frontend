@@ -31,7 +31,7 @@ function CharacterCard({
           </div>
         ) : (
           <img
-            src={char.avatar}
+            src={`${import.meta.env.BASE_URL}${char.avatar}`}
             alt={`${char.name} 프로필`}
             className="character-avatar"
             onError={() => setAvatarError(true)}
